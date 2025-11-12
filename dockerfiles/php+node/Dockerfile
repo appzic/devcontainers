@@ -11,13 +11,6 @@ RUN sudo apt-get update -y
 RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash - &&\
     sudo apt-get install -y nodejs
 
-# Install prerequisites for php
-RUN sudo apt-get install -y \
-    software-properties-common \
-    ca-certificates \
-    lsb-release \
-    apt-transport-https 
-
 # Install php
 RUN sudo add-apt-repository ppa:ondrej/php \
     && sudo apt-get update -y \
@@ -40,4 +33,3 @@ RUN sudo apt-get install -y \
     php${VERSION}-xml \
     php${VERSION}-bcmath \
     php${VERSION}-sqlite3
-    

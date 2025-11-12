@@ -1,16 +1,8 @@
 FROM appzic/dc:base-ubuntu-22.04
 
-ARG VERSION=3.12.2
+ARG VERSION=3.7.3
 
 USER vscode
-
-# Install prerequisites
-RUN sudo apt-get update -y && \
-    sudo apt-get install -y \ 
-    build-essential \
-    wget \
-    libffi-dev \
-    libsqlite3-dev
 
 # Download extract and python source file
 RUN cd /tmp && \
