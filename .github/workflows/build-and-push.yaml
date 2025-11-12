@@ -25,8 +25,8 @@ jobs:
           filters: |
             'node':
               - 'dockerfiles/node/Dockerfile'
-            'php+node':
-              - 'dockerfiles/php+node/Dockerfile'
+            'php-node':
+              - 'dockerfiles/php-node/Dockerfile'
             'python':
               - 'dockerfiles/python/Dockerfile'
             'ubuntu':
