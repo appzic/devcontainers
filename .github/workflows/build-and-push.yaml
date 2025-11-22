@@ -10,6 +10,7 @@ on:
       - synchronize
     paths:
       - "./dockerfiles/**"
+  workflow_dispatch:
 
 jobs:
   detect-changes:
