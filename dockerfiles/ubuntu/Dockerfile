@@ -1,9 +1,10 @@
-ARG VERSION
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-${VERSION}
+ARG UBUNTU_VERSION
+
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-${UBUNTU_VERSION}
 
 USER vscode
 
-RUN apt-get update && apt-get install -y \
+RUN sudo apt-get update && sudo apt-get install -y \
     build-essential \
     wget \
     curl \
@@ -12,4 +13,5 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     ca-certificates \
     lsb-release \
-    apt-transport-https 
+    apt-transport-https \
+    telnet
